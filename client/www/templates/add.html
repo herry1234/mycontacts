@@ -1,0 +1,39 @@
+
+<ion-view title="Add A Contact">
+  <ion-content has-tabs="true">
+
+    <div class="list list-inset">
+      <label class="item item-input">
+        <span class="input-label">Your First name</span>
+        <input type="text" ng-model="contact.firstname">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Your Last name</span>
+        <input type="text" ng-model="contact.lastname">
+      </label>
+      <label class="item item-input item-select">
+        <span class="input-label">Your Gender</span>
+        <select ng-model="contact.gender">
+          <option selected>Male</option>
+          <option>Female</option>
+          <option>Unknown</option>
+        </select>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Your email</span>
+        <input type="email" ng-model="contact.email">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Your Cellphone</span>
+        <input type="number" ng-model="contact.phone">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Your Address</span>
+        <input type="number" ng-model="contact.address">
+      </label>
+
+      <button ng-click="addName(contact);" class="button button-positive button-block">Add</button>
+    </div>
+
+  </ion-content>
+</ion-view>

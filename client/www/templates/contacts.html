@@ -1,0 +1,16 @@
+
+<ion-view title="Contact Information">
+  <ion-content>
+
+    <ion-list>
+
+      <ion-item ng-repeat="contact in contacts" type="item-text-wrap" href="#/tab/contact/{{contact.id}}">
+        <h3>Name: {{contact.firstname}} {{contact.lastname}}</h3>
+        <p> Phone: {{contact.phone}}</p>
+        <p> Gender : {{contact.gender}} </p>
+      </ion-item>
+
+    </ion-list>
+
+  </ion-content>
+</ion-view>
