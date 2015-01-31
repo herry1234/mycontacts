@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.login','starter.register','starter.services', 'starter.controllers'])
 
 .run(function (User) {
   //Check if User is authenticated
@@ -21,6 +21,16 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
+    .state('login', {
+      url: '/login',
+      templateUrl: 'templates/login.html',
+      controller: 'LoginCtrl'
+    })
+    .state('register', {
+      url: '/register',
+      templateUrl: 'templates/register.html',
+      controller: 'RegisterCtrl'
+    })
 
     // setup an abstract state for the tabs directive
     .state('tab', {
@@ -64,12 +74,14 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
       url: '/about',
       views: {
         'about-tab': {
-          templateUrl: 'templates/about.html'
+          templateUrl: 'templates/about.html',
+          controller: 'AppUserCtrl'
         }
       }
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/contacts');
+  // $urlRouterProvider.otherwise('/tab/contacts');
+  $urlRouterProvider.otherwise('/login');
 
 });
