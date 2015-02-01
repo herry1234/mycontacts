@@ -2,5 +2,20 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "myfile": {
+    "name": "myfile",
+    "connector": "loopback-component-storage",
+    "provider" : "filesystem",
+    "root" : "contacts"
+  },
+  "mongodb_dev": {
+  "name": "mongodb_dev",
+  "connector": "mongodb",
+  "host": "widmore.mongohq.com",
+  "database": "restapp",
+  "username": "mongodbuser",
+  "password": "mongodbpass",
+  "port": 10000
   }
 }
