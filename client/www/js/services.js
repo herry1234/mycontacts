@@ -1,6 +1,6 @@
 (function(window, angular, undefined) {'use strict';
 
-var urlBase = "http://10.74.61.97:3000/api";
+var urlBase = "http://localhost:3000/api";
 var authHeader = 'authorization';
 
 var module = angular.module("starter.services", ['ngResource']);

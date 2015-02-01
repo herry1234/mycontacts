@@ -28,7 +28,7 @@ angular.module('starter.controllers', [])
 
   $scope.contact = {gender:"Male"};
   $scope.addName = function(contact) {
-    User.create(contact);
+    ContactsService.create(contact);
   };
 
 });
