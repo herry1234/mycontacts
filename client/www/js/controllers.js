@@ -10,16 +10,20 @@ angular.module('starter.controllers', [])
 })
 
 // A simple controller that shows a tapped item's data
-.controller('ContactDetailCtrl', function($scope, $stateParams, ContactsService) {
+.controller('ContactDetailCtrl', function($scope, $stateParams, $location,ContactsService) {
 
   // $scope.contact = ContactsService.get($stateParams.Id);
   $scope.contact = ContactsService.findById({id:$stateParams.Id});
+  $scope.delete = function() {
+    ContactsService.deleteById({id:$stateParams.Id});
+    $location.path('tab/contacts');
+  }
 })
-.controller('AppUserCtrl', function($scope,User) {
+.controller('AppUserCtrl', function($scope,$location,User) {
   $scope.currentUser = User.getCurrent();
   $scope.logout = function () {
     User.logout(function () {
-      // $location.path('/login');
+      $location.path('/login');
     });
   }
 })
