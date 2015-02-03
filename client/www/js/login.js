@@ -1,4 +1,4 @@
-angular.module('starter.login', ['starter.services', 'ionic'])
+angular.module('starter.login', ['starter.services'])
     .controller('LoginCtrl', function ($scope, User, $location, $ionicPopup) {
         if (User.getCachedCurrent()!==null) {
            $location.path('tab/contacts');
