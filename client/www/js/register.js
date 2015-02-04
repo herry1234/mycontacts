@@ -1,4 +1,4 @@
-angular.module('starter.register', ['starter.services', 'ionic'])
+angular.module('starter.register', ['starter.services'])
     .controller('RegisterCtrl', function ($scope, User, $ionicPopup, $location) {
 
         $scope.registration = {};
@@ -7,14 +7,9 @@ angular.module('starter.register', ['starter.services', 'ionic'])
          * Redirect user to the app if already logged in
          */
         if (User.getCachedCurrent()!==null) {
-            $location.path('tab/home');
+            $location.path('tab/contacts');
         }
 
-        /**
-         * @name register()
-         * @desctiption
-         * register a new user and login
-         */
         $scope.register = function () {
             $scope.registration.created = new Date().toJSON();
 

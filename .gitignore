@@ -2,3 +2,4 @@ node_modules/
 client/platforms
 client/hooks
 client/plugins
+server/datasources.json
