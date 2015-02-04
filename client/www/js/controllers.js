@@ -30,7 +30,7 @@ angular.module('starter.controllers', [])
 
 .controller('ContactInsertCtrl', function($scope, $stateParams,ContactsService ) {
 
-  $scope.contact = {gender:"Male"};
+  $scope.contact = {gender:"男"};
   $scope.addName = function(contact) {
     ContactsService.create(contact);
   };
