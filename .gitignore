@@ -3,3 +3,4 @@ client/platforms
 client/hooks
 client/plugins
 server/datasources.json
+tests_intern/

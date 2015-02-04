@@ -1,17 +1,22 @@
 
 <ion-view name="{{contact.firstname}}" >
   <ion-content padding="true">
-    <p>Name : {{contact.lastname}}{{contact.firstname}} </p>
-    <p>Phone Number {{ contact.phone }}</p>
-    <p>Address: {{ contact.address}} </p>
+    <p>姓名 : {{contact.lastname}}{{contact.firstname}} </p>
+    <p>电话 {{ contact.phone }}</p>
+    <p>住址: {{ contact.address}} </p>
+    <p> 性别 : {{contact.gender}} </p>
+    <p> EMAIL : {{contact.email}} </p>
+    <p> 住址 : {{contact.address}} </p>
+    <p> 工作 : {{contact.work}} </p>
+    <p> 他想说 : {{contact.other}} </p>
 
     <div class="padding">
       <button ng-click="delete()" class="button icon ion-compose button-block button-outline button-royal">
-      Delete
+      删除
       </button>
     </div>
 
 
-    <p><a class="button button-small icon ion-arrow-left-b" href="#/tab/contacts"> All Contacts</a></p>
+    <p><a class="button button-small icon ion-arrow-left-b" href="#/tab/contacts">所有人</a></p>
   </ion-content>
 </ion-view>

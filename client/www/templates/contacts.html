@@ -5,14 +5,14 @@
     <ion-list>
 
       <ion-item ng-repeat="contact in contacts" type="item-text-wrap" href="#/tab/contact/{{contact.id}}">
-        <h3>Name: {{contact.firstname}} {{contact.lastname}}</h3>
-        <p> Phone: {{contact.phone}}</p>
-        <p> Gender : {{contact.gender}} </p>
+        <h3>姓名: {{contact.firstname}} {{contact.lastname}}</h3>
+        <p> 电话: {{contact.phone}}</p>
+
       </ion-item>
 
     </ion-list>
     <ion-item ng-model=count>
-      <p> Total we have classmates: {{count.count}} </p>
+      <p> 目前共有: {{count.count}} 名同学</p>
     </ion-item>
 
   </ion-content>
