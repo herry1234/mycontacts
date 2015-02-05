@@ -4,11 +4,13 @@
 
     <div class="list list-inset">
       <label class="item item-input">
-        <span class="input-label">姓</span>
+        <!-- <span class="input-label"></span> -->
+        <i class="icon ion-ios7-person">姓(*)</i>
         <input type="text" ng-model="contact.lastname">
       </label>
       <label class="item item-input">
-        <span class="input-label">名</span>
+        <i class="icon ion-ios7-person">名(*)</i>
+        <!-- <span class="input-label">名(*)</span> -->
         <input type="text" ng-model="contact.firstname">
       </label>
       <label class="item item-input item-select">
@@ -24,7 +26,8 @@
         <input type="email" ng-model="contact.email">
       </label>
       <label class="item item-input">
-        <span class="input-label">手机</span>
+        <!-- <span class="input-label">手机(*)</span> -->
+        <i class="icon ion-ios7-telephone">手机(*)</i>
         <input type="number" ng-model="contact.phone">
       </label>
       <label class="item item-input">
@@ -40,7 +43,7 @@
         <input type="text" ng-model="contact.other">
       </label>
 
-      <button ng-click="addName(contact);" class="button button-positive button-block">增加</button>
+      <button ng-click="addName();" class="button button-positive button-block">增加</button>
     </div>
 
   </ion-content>

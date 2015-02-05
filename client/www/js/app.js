@@ -39,7 +39,7 @@ angular.module('starter', ['ionic', 'starter.login','starter.register','starter.
       templateUrl: 'templates/tabs.html'
     })
 
-    // the pet tab has its own child nav-view and history
+    // the tab has its own child nav-view and history
     .state('tab.contacts-index', {
       url: '/contacts',
       views: {

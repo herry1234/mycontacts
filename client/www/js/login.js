@@ -1,7 +1,8 @@
-angular.module('starter.login', ['starter.services'])
-    .controller('LoginCtrl', function ($scope, User, $location, $ionicPopup) {
+angular.module('starter.login', ['starter.services','ionic'])
+    .controller('LoginCtrl', function ($scope, User, $state, $ionicPopup) {
         if (User.getCachedCurrent()!==null) {
-           $location.path('tab/contacts');
+          //  $location.path('tab/contacts');
+          $state.go('tab.contacts-index');
         }
         /**
          * Currently you need to initialiate the variables
@@ -22,9 +23,10 @@ angular.module('starter.login', ['starter.services'])
         $scope.login = function () {
             $scope.loginResult = User.login({include: 'user', rememberMe: true}, $scope.credentials,
                 function () {
-                    var next = $location.nextAfterLogin || 'tab/contacts';
-                    $location.nextAfterLogin = null;
-                    $location.path(next);
+                  $state.go('tab.contacts-index');
+                    // var next = $location.nextAfterLogin || 'tab/contacts';
+                    // $location.nextAfterLogin = null;
+                    // $location.path(next);
                 },
                 function (err) {
                     $scope.loginError = err;
@@ -34,7 +36,8 @@ angular.module('starter.login', ['starter.services'])
         };
         $scope.goToRegister = function () {
           console.log("GoToRegister");
-            $location.path('register');
+            // $location.path('register');
+            $state.go('register');
         };
 
 

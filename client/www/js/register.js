@@ -1,5 +1,5 @@
 angular.module('starter.register', ['starter.services'])
-    .controller('RegisterCtrl', function ($scope, User, $ionicPopup, $location) {
+    .controller('RegisterCtrl', function ($scope, User, $ionicPopup, $state) {
 
         $scope.registration = {};
 
@@ -7,7 +7,7 @@ angular.module('starter.register', ['starter.services'])
          * Redirect user to the app if already logged in
          */
         if (User.getCachedCurrent()!==null) {
-            $location.path('tab/contacts');
+            $state.go('tab.contacts-index');
         }
 
         $scope.register = function () {
@@ -19,7 +19,8 @@ angular.module('starter.register', ['starter.services'])
                   User.login({include: 'user', rememberMe: true}, $scope.registration)
                   .$promise
                   .then(function (res) {
-                    $location.path('tab/contacts')
+                    $state.go('tab.contacts-index');
+                    // $location.path('tab/contacts')
                   }, function (err) {
                     $scope.loginError = err;
                     $scope.showAlert(err.statusText, err.data.error.message);

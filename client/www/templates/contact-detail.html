@@ -1,16 +1,44 @@
 
 <ion-view name="{{contact.firstname}}" >
   <ion-content padding="true">
-    <p>姓名 : {{contact.lastname}} {{contact.firstname}} </p>
-    <p>电话: {{ contact.phone }}</p>
-    <p>住址: {{ contact.address}} </p>
-    <p>性别 : {{contact.gender}} </p>
-    <p>EMAIL : {{contact.email}} </p>
-    <p>住址 : {{contact.address}} </p>
-    <p>工作 : {{contact.work}} </p>
-    <p>他想说 : {{contact.other}} </p>
+    <form novalidate="novalidate" name="contactDetailForm">
+
+      <div class="list list-inset">
+          <label class="item item-input">
+              <i class="icon ion-ios7-person"></i>
+              <input type="text" placeholder="Lastname" name="lastname" ng-model="contact.lastname" required>
+          </label>
+          <label class="item item-input">
+              <i class="icon ion-ios7-person"></i>
+              <input type="text" placeholder="Firstname" name="firstname" ng-model="contact.firstname" required>
+          </label>
+          <label class="item item-input">
+              <i class="icon ion-ios7-telephone"></i>
+              <input type="number" placeholder="Phone" name="phone" ng-model="contact.phone" required>
+          </label>
+          <label class="item item-input">
+              <i class="icon ion-email"></i>
+              <input type="email" placeholder="E-mail" name="email" ng-model="contact.email" required>
+          </label>
+          <label class="item item-input">
+              <i class="icon ion-ios7-location"></i>
+              <input type="text" placeholder="Location" name="location" ng-model="contact.address" required>
+          </label>
+          <label class="item item-input">
+              <i class="icon ion-card"></i>
+              <input type="text" placeholder="Work" name="work" ng-model="contact.work" required>
+          </label>
+          <label class="item item-input">
+              <i class="icon ion-quote"></i>
+              <input type="text" placeholder="Other" name="other" ng-model="contact.other" required>
+          </label>
+
+      </div>
 
     <div class="padding">
+      <button ng-click="updateit()" class="button icon ion-compose button-block button-outline button-royal">
+      Save
+      </button>
       <button ng-click="delete()" class="button icon ion-compose button-block button-outline button-royal">
       删除
       </button>
@@ -18,5 +46,6 @@
 
 
     <p><a class="button button-small icon ion-arrow-left-b" href="#/tab/contacts">所有人</a></p>
+    </form>
   </ion-content>
 </ion-view>
