@@ -15,30 +15,23 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-    // 'client/www/lib/js/angular-ui/angular-ui-route.js',
-    // 'client/www/lib/js/angular/angular.js',
-    // 'client/www/lib/js/angular/angular-sanitize.js',
-    'client/www/lib/js/ionic.bundle.js',
+      'client/www/lib/js/ionic.bundle.js',
       'client/www/lib/js/angular/angular-resource.js',
-      'client/www/lib/js/angular/angular-route.js',
+      // 'client/www/lib/js/angular/angular.js',
+      // 'client/www/lib/js/angular-ui/angular-ui-router.js',
+      'client/www/js/*.js',
       'client/www/lib/js/angular/angular-mocks.js',
-
-      // 'client/www/lib/js/ionic.js',
-      // 'client/www/lib/js/ionic-angular.js',
-      'client/www/js/**/*.js',
-
+      'client/www/js/tests/*.js',
     ],
 
 
     // list of files to exclude
-    exclude: [
-    ],
+    exclude: [],
 
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-    },
+    preprocessors: {},
 
 
     // test results reporter to use

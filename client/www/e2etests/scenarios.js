@@ -25,8 +25,13 @@ describe('my app', function() {
 
 
     it('should render view1 when user navigates to /view1', function() {
-      expect(element.all(by.css('[ng-model]')).first().getText()).
-        toMatch(/Total we have classmates: 2/);
+      //expect(element(by.model('count')).element(by.tagName('p')).getText()).
+      //expect(element(by.model('count')).element(by.css('.ng-binding')).getText()).
+      //var el = element(by.model('count')).element(by.tagName('p'));
+      var el = element.all(by.css('.item-content')).first().element(by.tagName('p'));
+      el.getText().then(function(text) {
+        expect(text).toMatch(/电话: 13636321954/);
+      });
 
     });
 
